@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  margin: 93px 24px 91px;  
+  margin: 96px 24px 91px;  
 }
 
 .header__menu {
@@ -68,16 +68,6 @@
   background-size: cover;
 }
 
-.cover:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background-color: #000;
-}
-
 .cover__title {
   position: relative;
   z-index: 1;
@@ -87,8 +77,16 @@
   padding: 164px 50px 136px;
   font-size: 100px;
   line-height: 105%;
-  letter-spacing: 0.3em;
   text-transform: uppercase;
+  letter-spacing: 30px;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.no-letter-spacing {
+  letter-spacing: normal;
 }
 
 .aligned-text {
@@ -105,34 +103,13 @@
 }
 
 .aligned-text_center {
-  line-height: 96%;
-  letter-spacing: 0;
+  line-height: 94%;
   text-align: center;
-}
-
-.aligned-text_center span:nth-child(1){
-  letter-spacing: 18px;
-}
-.aligned-text_center span:nth-child(2){
-  letter-spacing: 60px;
 }
 
 .aligned-text_right {
   line-height: 100%;
-  letter-spacing: 10px;
   text-align: end;
-}
-
-.aligned-text_right span:nth-child(1) {
-  letter-spacing: 28px;
-}
-
-.aligned-text_right span:nth-child(2) {
-  letter-spacing: 13px;
-}
-
-.no-letter-spacing {
-  letter-spacing: normal;
 }
 
 .cover__description {
@@ -156,11 +133,15 @@
 }
 
 .bet-button {
-  border: 1px solid #fff;
+  color: #fff;
+  border: 1px solid currentColor;
   padding: 0px 32px;
   font-size: 22px;
   line-height: 51px;
   text-decoration: none;
+  font-family: inherit;
+  text-transform: uppercase;
+  background: transparent;
 }
 
 
@@ -199,16 +180,6 @@
   text-decoration: none;
 }
 
-.card-link:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background-color: #000;
-}
 
 .card {
   display: flex;
@@ -302,10 +273,11 @@
   font-size: 20px;
   line-height: 120%;
   letter-spacing: 0.01em;
+  margin-bottom: 24px;
 }
 
-.about__text:first-child {
-  margin-bottom: 24px;
+.about__text:last-child {
+  margin-bottom: 0;
 }
 /* about style end */
 
@@ -314,6 +286,10 @@
   display: flex;
   justify-content: space-between;
   margin: 0 50px 88px;
+}
+
+.footer__menu {
+  padding-left: 40px;
 }
 
 .footer__menu-list {
